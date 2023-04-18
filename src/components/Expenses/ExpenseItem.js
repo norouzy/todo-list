@@ -9,18 +9,18 @@ const ExpenseItem = (probs) => {
   // const expenseAmount = 294.67;
 
   // let title = probs.title;
-  const [title, setTitle] = useState(probs.title);
-  const clickHandler = () => {
-    setTitle("updated");
-    // console.log("clicked");
-    console.log(title);
-  };
+  // const [title, setTitle] = useState(probs.title);
+  // const clickHandler = () => {
+  //   setTitle("updated");
+  //   // console.log("clicked");
+  //   console.log(title);
+  // };
 
   return (
     <Card className="expense-item">
       <ExpenseDate date={probs.date} />
       <div className="expense-item__description">
-        <h2>{title}</h2>
+        <h2>{probs.title}</h2>
         <div className="expense-item__price">${probs.amount}</div>
       </div>
       {/* <button onClick={clickHandler}>Change Title</button> */}

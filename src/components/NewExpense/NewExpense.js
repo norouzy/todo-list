@@ -5,8 +5,8 @@ import "./NewExpense.css";
 const NewExpense = (probs) => {
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = {
-      ...enteredExpenseData,
       id: Math.random().toString(),
+      ...enteredExpenseData,
     };
     probs.onAddExpense(expenseData);
     // console.log(expenseData);
