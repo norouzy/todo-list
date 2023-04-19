@@ -12,7 +12,7 @@ const ChartBar = (probs) =>{
     return (
         <div className="chart-bar">
             <div className="chart-bar__inner">
-                <div className="chart-bar__fill" style={{height: barFillHeight, 'background-color' : 'red'}}></div>
+                <div className="chart-bar__fill" style={{height: barFillHeight, 'background-color' : '#4826b9'}}></div>
             </div>
             <div className="chart-bar__label">{probs.label}</div>
         </div>
