@@ -8,8 +8,7 @@ import "./Expenses.css";
 import { useState } from "react";
 const Expenses = (probs) => {
   
-  const [filteredYear, setFilteredYear] = useState('2020')
-  console.log(probs.items)
+  const [filteredYear, setFilteredYear] = useState('2022')
 
   const filterChangeHandler = selectedYear =>{
     setFilteredYear(selectedYear)
@@ -32,7 +31,7 @@ const Expenses = (probs) => {
   // }
   return (
     <Card className="expenses">
-      <ExpensesFilter selectedYear={filteredYear} onChangeFilter={filterChangeHandler} />
+      <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
 
       <ExpensesChart expenses={filteredExpenses} />
       <ExpensesList items={filteredExpenses} />
