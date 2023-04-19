@@ -63,7 +63,10 @@ const ExpenseForm = (probs) => {
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
+
   };
+
+
   return (
     <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
@@ -98,6 +101,7 @@ const ExpenseForm = (probs) => {
       </div>
       <div className="new-expense__actions">
         <button>Add Expense</button>
+        <button onClick={probs.onCancel}>Cancel</button>
       </div>
     </form>
   );

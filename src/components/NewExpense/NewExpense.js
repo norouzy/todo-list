@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import ExpenseForm from "./ExpenseForm";
 import "./NewExpense.css";
 
@@ -12,9 +12,22 @@ const NewExpense = (probs) => {
     // console.log(expenseData);
   };
 
+  const [isFormActive, setFormIsActive] = useState(false)
+
+  const isFormActiveHandler = () =>{
+    setFormIsActive(!isFormActive)
+  }
+
   return (
+
     <div className="new-expense">
-      <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} />
+      {!isFormActive && (
+        <button onClick={isFormActiveHandler}>Add New Expense</button>
+      )}
+      {isFormActive && (
+        <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} onCancel={isFormActiveHandler} />
+      )}
+      
     </div>
   );
 };
