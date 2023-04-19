@@ -17,6 +17,7 @@ const ExpenseItem = (probs) => {
   // };
 
   return (
+    <li>
     <Card className="expense-item">
       <ExpenseDate date={probs.date} />
       <div className="expense-item__description">
@@ -25,6 +26,7 @@ const ExpenseItem = (probs) => {
       </div>
       {/* <button onClick={clickHandler}>Change Title</button> */}
     </Card>
+    </li>
   );
 };
 
